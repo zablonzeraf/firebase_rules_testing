@@ -1,0 +1,14 @@
+{
+  "name": "firebase-testing-rules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@firebase/testing": "^0.20.11",
+    "jest": "^27.3.1"
+  }
+}
