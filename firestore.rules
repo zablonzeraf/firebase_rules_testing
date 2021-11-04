@@ -4,5 +4,14 @@ service cloud.firestore {
     match /{document=**} {
       allow read, write: if false;
     }
+
+    match /projects/{docId} {
+      allow read, write: if getUserData().roles['admin'] == true
+        || resource.data.members.hasAny([request.auth.uid])
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data
+    }
   }
 }

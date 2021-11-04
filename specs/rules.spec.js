@@ -1,7 +1,7 @@
 const { assertFails, assertSucceeds } = require("@firebase/testing");
-const { setup, teardown } = require("./helpers");
+const { setup, teardown } = require("./utils/helpers");
 
-require("./extensions");
+require("./utils/extensions");
 
 describe("Database rules", () => {
   let db;
